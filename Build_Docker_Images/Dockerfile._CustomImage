@@ -1,0 +1,20 @@
+# Each instruction in this Dockerfile creates a new layer in the image.
+# This Dockerfile sets up an nginx web server on an Ubuntu base image.
+# The Line below specifies Ubuntu as the base image to use for the Docker image.
+FROM ubuntu:latest
+
+# Identify the maintainer of the Dockerfile. Update the email address to your own.
+LABEL version="0.0.1"
+LABEL maintainer="mailtojoyjoel@gmail.com"
+
+# Update the Ubuntu base image to the latest packages using the apt package manager.
+RUN apt-get update && apt-get upgrade -y
+
+# Install nginx web server using the apt package manager.
+RUN apt-get install nginx -y
+
+# Expose port 80
+EXPOSE 80
+
+# command to start up NGINX within the container.
+CMD [ "nginx", "-g", "daemon off;" ]
