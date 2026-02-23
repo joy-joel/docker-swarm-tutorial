@@ -1,0 +1,23 @@
+services:
+  python-app:
+    build:
+      context: .
+      dockerfile: Dockerfile.python
+      args:
+        - BASE_IMAGE=python:3.14
+        - APP_VERSION=1.0.0
+    environment:
+      DEBUG: "true"
+    image: oluebubechukwu/pythonwebapp:1.0.0
+
+
+  node-app:
+    build:
+      context: .
+      dockerfile: Dockerfile.node
+      args:
+        - BASE_IMAGE=node:latest
+        - APP_NAME=node-service
+    environment:
+      DEBUG: "true"
+      image: oluebubechukwu/node-webapp:latest
