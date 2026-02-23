@@ -110,7 +110,7 @@ edit `docker-compose.yml` directly.
 
 ---
 
-## 🔧 Customization
+## Customization
 
 - **Change the base image** via `BASE_IMAGE` build arg.
 - **Set the application name or version** using `APP_NAME`/`APP_VERSION`.
@@ -119,11 +119,11 @@ edit `docker-compose.yml` directly.
 
 ---
 
-## ✅ Notes
+##  Notes
 
 - Images are tagged as `oluebubechukwu/pythonwebapp:1.0.0` and `oluebubechukwu/node-webapp:latest` in the example; adjust the `image:` field to match your registry or dockerhub username.
 - `docker-compose` handles the context for you, so changes to any file in the directory will be included on rebuild.
-- The apps are intentionally trivial; extend them to experiment with environment propagation, multi-stage builds, or deployment to Docker Swarm.
+- The apps are intentionally simple; extend them to experiment with environment setup, multi-stage builds, or deployment to Docker Swarm.
 
 ---
 
