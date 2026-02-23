@@ -20,4 +20,4 @@ services:
         - APP_NAME=node-service
     environment:
       DEBUG: "true"
-      image: oluebubechukwu/node-webapp:latest
+    image: oluebubechukwu/node-webapp:1.0.0
