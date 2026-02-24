@@ -85,17 +85,22 @@ At runtime the apps read `APP_VERSION`/`APP_NAME` and `ENVIRONMENT` and write a 
 
 ---
 
-## ⚡ Build & run
+## ⚡ Build & run & push to docker registry
 
 From the `docker_compose_build_image` directory:
 
 ```bash
 # build both images
-docker-compose build
+docker compose build
 
 # start containers
-docker-compose up
+docker compose up
+
+# push images
+docker compose push
+
 ```
+
 
 Logs will show output similar to:
 
